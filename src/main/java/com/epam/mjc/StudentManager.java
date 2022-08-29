@@ -19,7 +19,6 @@ public class StudentManager {
     for (int i = 0; i < IDs.length; i++) {
       Student student = manager.find(IDs[i]);
       System.out.println("Student name " + student.getName());
-      }
     }
 
   }
