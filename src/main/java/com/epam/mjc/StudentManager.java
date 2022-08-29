@@ -13,13 +13,12 @@ public class StudentManager {
     StudentManager manager = new StudentManager();
 
     for (int i = 0; i < IDs.length; i++) {
-      try
-      {
-        Student student = manager.find(IDs[i]);
+      Student student = manager.find(IDs[i]);
+      if(student != null){
         System.out.println("Student name " + student.getName());
       }
-      catch (StudentNotFoundException e){
-          throw new StudentNotFoundException("Could not find student with ID " + IDs[i]);
+      else{
+        throw new StudentNotFoundException("Could not find student with ID " + IDs[i]);
       }
     }
 
